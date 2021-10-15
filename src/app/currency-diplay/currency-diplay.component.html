@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <h1>Hello Group</h1>
+</nav>
+<div class="container">
+
+  <form [formGroup]="form">
+
+    <div class="row">
+
+      <div class="col">
+        <div *ngIf="data.PKR">
+          <h3><b>Country: {{countryPKR}} &nbsp; Currency: {{this.data.PKR}}</b></h3>
+          <img height="150" src="../../assets/img/PKR.jpg" width="200">
+        </div>
+      </div>
+
+      <div class="col">
+        <div *ngIf="data.ZAR">
+          <h3><b>Country: {{countryZAR}} &nbsp; Currency: {{this.data.ZAR}}</b></h3>
+          <img height="150" src="assets/img/ZAR.jpg" width="200">
+        </div>
+      </div>
+
+      <div class="col">
+        <div *ngIf="data.INR">
+          <h3><b>Country: {{countryINR}} &nbsp; Currency: {{this.data.INR}}</b></h3>
+          <img height="150" src="assets/img/INR.jpg" width="200">
+        </div>
+      </div>
+
+      <div class="col">
+        <div *ngIf="data.BDT">
+          <h3><b>Country: {{countryBDT}} &nbsp; Currency: {{this.data.BDT}}</b></h3>
+          <img height="150" src="assets/img/BDT.jpg" width="200">
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col">
+          <label>Refresh</label>
+          <br/>
+          <button (click)="refresh()"
+                  class="btn btn-warning btn-lg">
+            <mat-icon>refresh</mat-icon>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </form>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <span>All Rights Reserved 2021 @HelloGroup</span>
+  </div>
+</footer>
